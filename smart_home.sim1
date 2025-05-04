@@ -1,0 +1,43 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-172,-268" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../workspace/smarthome/build/arduino.avr.uno/smarthome.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Potentiometer" CircId="Potentiometer-3" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="232,-232" rotation="-270" hflip="1" vflip="1" label="Potentiometer-3" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="500 Ω" Value_Ohm="354 Ω" Slider="false" Scale="1" />
+
+<item itemtype="LedRgb" CircId="LedRgb-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-320,-220" rotation="-180" hflip="1" vflip="1" label="LedRgb-7" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-8" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-272,-196" rotation="0" hflip="1" vflip="1" label="Resistor-8" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-9" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-272,-220" rotation="0" hflip="1" vflip="1" label="Resistor-9" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-10" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-272,-244" rotation="0" hflip="1" vflip="1" label="Resistor-10" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Node" CircId="Node-4" mainComp="false" Pos="-20,-212" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Node-4-1" endpinid="Potentiometer-3-PinM" pointList="-20,-212,216,-212,216,-232" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Uno-1-A0" endpinid="Node-4-0" pointList="-20,-212,-20,-212" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Node-4-2" endpinid="Uno-1-A0" pointList="-20,-212,-20,-212" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Potentiometer-3-PinB" endpinid="Uno-1-GND0" pointList="232,-216,232,-188,-20,-188" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Potentiometer-3-PinA" endpinid="Uno-1-5V0" pointList="232,-248,260,-248,260,-172,-20,-172" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="LedRgb-7-Pin3" endpinid="Uno-1-GND2" pointList="-336,-220,-336,-132,-164,-132" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="LedRgb-7-Pin2" endpinid="Resistor-10-lPin" pointList="-304,-228,-288,-228,-288,-244" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="LedRgb-7-Pin1" endpinid="Resistor-9-lPin" pointList="-304,-220,-288,-220" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="LedRgb-7-Pin0" endpinid="Resistor-8-lPin" pointList="-304,-212,-288,-212,-288,-196" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Resistor-8-rPin" endpinid="Uno-1-3" pointList="-256,-196,-236,-196,-236,-228,-164,-228" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Resistor-9-rPin" endpinid="Uno-1-5" pointList="-256,-220,-252,-220,-252,-212,-164,-212" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Resistor-10-rPin" endpinid="Uno-1-6" pointList="-256,-244,-228,-244,-228,-204,-164,-204" />
+
+</circuit>
